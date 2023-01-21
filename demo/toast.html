@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta hssyp-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../src/ssy-ui.css">
+    <title>可爱面包片组件</title>
+</head>
+
+<body>
+    <div class="ssy-content">
+        <h1 class="ssy-panel-title">面包片提示！</h1>
+
+        <div class="ssy-panel-body">
+            <a class="ssy-btn btn-primary" id="js-show-toast-loading">点我加载</a>
+            <div class="ssy-toast" id="js-toast-loading">
+                <i class="fa fa-circle-o-notch fa-spin ssy-toast-icon"></i>
+                <p class="ssy-toast-info">加载中…</p>
+            </div>
+            <br>
+
+            <a class="ssy-btn btn-primary" id="js-show-toast-success">点我成功</a>
+            <div class="ssy-toast" id="js-toast-success">
+                <i class="fa fa-check ssy-toast-icon"></i>
+                <p class="ssy-toast-info">加载成功</p>
+            </div>
+            <br>
+            <a class="ssy-btn btn-primary" id="js-show-toast-fail">点我失败</a>
+            <div class="ssy-toast" id="js-toast-fail">
+                <i class="fa fa-close ssy-toast-icon"></i>
+                <p class="ssy-toast-info">加载失败</p>
+            </div>
+
+        </div>
+
+</body>
+
+<script>
+    window.onload = () => {
+        // 加载
+        document.querySelector('#js-show-toast-loading').onclick = (e) => {
+            let toastEle = document.querySelector('#js-toast-loading');
+            toastEle.classList.add('show');
+            setTimeout(() => {
+                toastEle.classList.remove('show');
+            }, 1e3);
+        };
+
+        // 成功
+        document.querySelector('#js-show-toast-success').onclick = (e) => {
+            let toastEle = document.querySelector('#js-toast-success');
+            toastEle.classList.add('show');
+            setTimeout(() => {
+                toastEle.classList.remove('show');
+            }, 1e3);
+        };
+
+        // 失败
+        document.querySelector('#js-show-toast-fail').onclick = (e) => {
+            let toastEle = document.querySelector('#js-toast-fail');
+            toastEle.classList.add('show');
+            setTimeout(() => {
+                toastEle.classList.remove('show');
+            }, 1e3);
+        };
+    };
+</script>
+
+</html>

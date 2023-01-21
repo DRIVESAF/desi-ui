@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../src/ssy-ui.css">
+  <title>actionsheet</title>
+</head>
+
+<body>
+  <div class="ssy-content">
+    <h1 class="ssy-panel-title">弹出式菜单</h1>
+    <div class="ssy-panel-body">
+      <a class="ssy-btn" id="show">一键弹出</a>
+    </div>
+  </div>
+  <div class="ssy-action-sheet">
+    <div class="ssy-mask"></div>
+    <div class="ssy-action-sheet-wrap">
+      <div class="ssy-action-sheet-header">
+        <h1 class="ssy-action-sheet-title">你要吃什么？</h1>
+      </div>
+      <div class="ssy-action-sheet-body">
+        <a class="ssy-action-sheet-menu">肯德基的基肉</a>
+        <a class="ssy-action-sheet-menu">麦当劳的劳饭</a>
+        <a class="ssy-action-sheet-menu">海底捞的捞面</a>
+      </div>
+      <div class="ssy-action-sheet-footer">
+        <a class="ssy-action-sheet-menu" id="close">一键收回</a>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    window.onload = () => {
+      // 弹出菜单
+      document.querySelector('#show').onclick = (e) => {
+        document.querySelector('.ssy-action-sheet').classList.add('show');
+      }
+      // 收回菜单
+      document.querySelector('#close').onclick = (e) => {
+        document.querySelector('.ssy-action-sheet').classList.remove('show');
+      }
+    };
+  </script>
+</body>
+
+</html>

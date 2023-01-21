@@ -1,0 +1,17 @@
+{
+  "name": "ssy-ui",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "autoprefixer": "^9.6.1",
+    "cssnano": "^5.1.14",
+    "postcss-cli": "^10.1.0",
+    "postcss-import": "^12.0.1"
+  }
+}
